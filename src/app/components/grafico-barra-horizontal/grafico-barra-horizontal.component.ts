@@ -50,8 +50,9 @@ export class GraficoBarraHorizontalComponent implements OnDestroy{
 
       const newResults = [...this.results];
 
+      // tslint:disable-next-line: forin
       for (let i in newResults) {
-        newResults[i].value = Math.round( Math.random() * 500)
+        newResults[i].value = Math.round( Math.random() * 500 )
       }
 
       this.results = [...newResults];
@@ -66,6 +67,6 @@ export class GraficoBarraHorizontalComponent implements OnDestroy{
 
   ngOnDestroy(){
     clearInterval(this.interval);
-  };
+  }
 
 }
